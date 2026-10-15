@@ -1,0 +1,14 @@
+# Portfolio roadmap
+- [x] Establish the dark typography and layout system.
+- [x] Build all portfolio sections and evidence-based skills map.
+- [x] Verify navigation, skill interactions, copy email and mobile layout.
+- [x] Trim redundant subtext and balance centered elements across mobile and desktop.
+- [x] Connect the supplied resume and verify PDF delivery.
+- [x] Add current study-spot and internship-hub projects, and certifications being explored (not earned).
+- [x] Bring projects into their own section, refine hero/contact/certification copy, and replace the favicon.
+- [x] Verify mobile layout, project navigation, and skills-map scrolling to the server project.
+- [x] Apply second-pass layout and supplied work/project copy; keep page description synchronized with the intro.
+- [x] Synchronize project skill evidence and verify all 11 destinations at desktop, 320px and 375px without overflow or runtime errors.
+- [x] Copy pass: hero availability wording, About "Where I'm headed" plus a dated "Now" list replacing the certification block, and renamed work group labels.
+- [x] Publish the supplied LinkedIn URL in the hero and contact links, and add the personal-interests sentence to the About paragraph.
+- [x] Replace the interactive skills map with a static text list; delete the component, its styles, the unused button variants and the unused evidence collection.
