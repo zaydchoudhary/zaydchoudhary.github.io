@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useState, type ReactNode } from 'react';
 import { skillGroups } from '@/data/skills';
+import { TerminalHero } from '@/components/terminal-hero';
 import { entries, profile, workGroups, projects, now, type Entry } from '@/data/content';
 
 const resumeUrl = '/resume.pdf';
@@ -56,6 +57,7 @@ function Index() {
   const leadership = entries.find(entry => entry.id === 'akpsi');
 
   return <>
+    <div className="hero-backdrop" aria-hidden="true" />
     <header className="portfolio-wrap site-header">
       <nav className="nav-list" aria-label="Main navigation">
         <a href="#work">Work</a>
@@ -65,15 +67,7 @@ function Index() {
     </header>
     <main id="top" className="portfolio-wrap">
       <section className="hero" aria-labelledby="portfolio-name">
-        <h1 id="portfolio-name">{profile.name}</h1>
-        <p className="hero-intro">{profile.intro}</p>
-        <p className="hero-status">{profile.availability}. Based in {profile.location}.</p>
-        <div className="link-row">
-          <a href={resumeUrl} target="_blank" rel="noopener noreferrer">Resume</a>
-          <a href={`mailto:${profile.email}`}>Email</a>
-          {profile.linkedin && <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>}
-          {profile.github && <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>}
-        </div>
+        <TerminalHero resumeUrl={resumeUrl} />
       </section>
       <Section id="work" title="Work">
         {workGroups.map(group => entries.filter(entry => entry.group === group).map(entry => <ExperienceRow key={entry.id} entry={entry} />))}
