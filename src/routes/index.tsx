@@ -74,17 +74,15 @@ function Index() {
         {leadership && <ExperienceRow entry={leadership} />}
       </Section>
       <Section id="about" title="About">
-        <p className="about-copy">{profile.about}</p>
-        <p className="about-copy">{profile.education}, Purdue University. {profile.graduation}.</p>
+        {profile.about.map(paragraph => <p className="about-copy" key={paragraph}>{paragraph}</p>)}
         <h3>Where I'm headed</h3>
         <p className="about-copy">{profile.directions}</p>
         <h3>Now ({profile.nowUpdated})</h3>
         <ul className="entry-bullets">{profile.now.map(item => <li key={item}>{item}</li>)}</ul>
       </Section>
       <Section id="contact" title="Contact">
-        <p className="about-copy">The best way to reach me is email: <a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+        <p className="about-copy selectable">The best way to reach me is email: <a href={`mailto:${profile.email}`}>{profile.email}</a></p>
       </Section>
     </main>
-    <footer className="portfolio-wrap site-footer">{profile.name}, updated {profile.updated}</footer>
   </>;
 }

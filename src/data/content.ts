@@ -14,10 +14,7 @@ type Profile = {
   availability: string;
   location: string;
   email: string;
-  about: string;
-  education: string;
-  graduation: string;
-  updated: string;
+  about: string[];
   directions: string;
   now: string[];
   nowUpdated: string;
@@ -27,29 +24,30 @@ type Profile = {
 
 export const profile: Profile = {
   name: 'Zayd Choudhary',
-  intro: "Cybersecurity student at Purdue. I've imaged and deployed 1,500+ devices, taught networking labs, and run my own Linux server.",
+  intro: "Cybersecurity student at Purdue. I've imaged and deployed 500+ devices, taught networking labs, and co-host a Linux media server.",
   availability: 'Looking for summer 2027 internships',
   location: 'West Lafayette, IN',
   email: 'zchoudha@purdue.edu',
   linkedin: 'https://www.linkedin.com/in/zayd-choudhary/',
   github: '',
-  about: "I study cybersecurity at Purdue with a minor in Management. Outside class I build small tools I actually use, and I run a Linux server at home. Outside of that I'm usually rock climbing, out on a trail, or making music.",
-  education: 'B.S. Cybersecurity with a minor in Management',
-  graduation: 'Graduating December 2027',
-  updated: 'October 2026',
-  directions: "I want to work where infrastructure meets the business side. For internships that means IT and security engineering, network engineering, or supply chain and logistics. Longer term I'm aiming for solutions architecture, which needs a bit of all three.",
-  now: ['Running recruitment for Alpha Kappa Psi', 'Building the Study Spots iOS app', 'Studying for ISC2 CC'],
+  about: [
+    "I'm a junior at Purdue studying cybersecurity with a minor in Management, graduating in December 2027.",
+    "I got into IT through a school district internship back home in Illinois, where I imaged and repaired hundreds of student devices and earned an Acer device repair certification. Since then I've taught networking labs at Purdue, done market research for a manufacturer, trained AI models, and run recruitment for a 150+ member business fraternity.",
+    "Outside class I build small tools I actually use, mostly with Claude, and help run a Linux media server. When I'm away from a keyboard I'm usually rock climbing, out on a trail, or playing video games.",
+  ],
+  directions: "I'm aiming for security and IT engineering, and I'm most interested in where that work meets AI: securing the systems companies are building on AI, and using AI to make IT and security teams faster. Training models and building my own tools with Claude have shown me both sides of that. The other field I'd consider is logistics, where my analyst work at Cadco showed me how much of the supply chain depends on reliable systems and clean data.",
+  now: ['Working as an AI trainer for multiple companies', 'Running recruitment for Alpha Kappa Psi', 'Building the Study Spots iOS app', 'Studying for ISC2 CC'],
   nowUpdated: 'October 2026',
 };
 
 export const entries: Entry[] = [
   {
     id: 'ta', role: 'Lab Instructor (Undergraduate TA)', org: 'Purdue Polytechnic, CNIT 17600', dates: 'Jan - Jun 2026', group: 'it',
-    bullets: ['Ran weekly networking, hardware and OS labs for 35 students.', 'Lab report scores went up 10% over the semester after I started walking students through live builds.'],
+    bullets: ['Led weekly labs for a class of 35 on networking, system hardware and OS fundamentals.', 'Walked students through lab builds and live hardware, OS and network troubleshooting. Lab report scores went up 10% over the semester.', 'Graded hundreds of lab assignments against standardized rubrics and flagged recurring technical errors to faculty.'],
   },
   {
     id: 'cusd', role: 'IT Intern', org: 'CUSD 308, Oswego, IL', dates: 'Aug 2023 - May 2024', group: 'it',
-    bullets: ['Imaged, configured and deployed 1,500+ Windows and Chromebook devices.', 'Tier 1 tickets: account access, permissions, Wi-Fi, LAN and printers. Also checked lab machines against security baselines.'],
+    bullets: ["Tier 1 support across the district's Windows and Chromebook fleets, fixing hardware and OS faults.", 'Imaged, configured and deployed 500+ student and faculty devices back into service.', 'Earned an Acer device repair certification through the role.', 'Restored account and permission access, troubleshot LAN, Wi-Fi and printers across buildings, and checked lab machines against security baselines.'],
   },
   {
     id: 'cadco', role: 'Research Analyst Intern', org: 'Cadco Ltd., Winsted, CT', dates: 'Jun - Sep 2026', group: 'analysis',
@@ -57,7 +55,7 @@ export const entries: Entry[] = [
   },
   {
     id: 'handshake', role: 'AI Trainer', org: 'Handshake, remote', dates: 'Nov 2025 - Jan 2026', group: 'analysis',
-    bullets: ['Rated 100+ model responses against rubrics and wrote prompts designed to make models fail.'],
+    bullets: ['Rated and ranked 100+ model responses on accuracy, relevance and instruction-following against set rubrics.', 'Wrote a rationale for every rating, documenting errors and explaining why one response beat another.', 'Wrote prompts and test questions designed to surface where models fail.'],
   },
   {
     id: 'akpsi', role: 'Head of Recruitment', org: 'Alpha Kappa Psi, Purdue', dates: 'Aug 2026 - now',
@@ -86,7 +84,7 @@ export const projects: Entry[] = [
   },
   {
     id: 'server', role: 'Home Cloud Media Server', org: 'Personal project', dates: 'Dec 2024 - now',
-    bullets: ['Self-hosted Jellyfin on Linux with secure remote access for a handful of users.', 'RAID plus scheduled backups that I actually restore-test.'],
-    technologies: 'Linux, Jellyfin, RAID, backups and remote access.',
+    bullets: ['Co-host a self-hosted Linux media server running Jellyfin, with secure remote access for our users.', 'Maintain the Discord bots that give users a simple interface to request films, which then download into our shared library.', "RAID, scheduled backups and restore tests, so one dead drive doesn't take the library with it.", 'Watch uptime, storage health and network traffic, and fix permission and connection problems from the logs.'],
+    technologies: 'Linux, Jellyfin, Discord bots, RAID, backups and remote access.',
   },
 ];
