@@ -93,7 +93,6 @@
   html { scroll-behavior: smooth; }
   body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); font-size: 16px; -webkit-font-smoothing: antialiased; }
   body { user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
-  .selectable { user-select: text; -webkit-user-select: text; }
   :focus:not(:focus-visible) { outline: none; }
   a { text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
   a:hover { color: var(--primary); text-decoration-color: currentColor; }
@@ -124,6 +123,10 @@
 .skills-list > div + div { margin-top: 16px; }
 .skills-list dt { font-weight: 500; }
 .skills-list dd { margin: 4px 0 0; color: var(--muted-foreground); line-height: 1.65; }
+.contact-email { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; margin: 0; }
+.contact-email button { padding: 0; border: 0; background: none; font: inherit; font-size: 22px; color: var(--foreground); cursor: copy; user-select: text; -webkit-user-select: text; overflow-wrap: anywhere; text-align: left; }
+.contact-email button:hover { color: var(--primary); }
+.copy-note { font-size: 14px; color: var(--muted-foreground); }
 .about-copy { color: var(--muted-foreground); font-size: 17px; line-height: 1.7; margin: 0 0 16px; }
 @media(max-width: 767px) {
   .portfolio-wrap { width: calc(100% - 40px); }

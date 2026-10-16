@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import { skillGroups } from '@/data/skills';
 import { entries, profile, workGroups, projects, type Entry } from '@/data/content';
 
@@ -32,6 +32,23 @@ function ExperienceRow({ entry }: { entry: Entry }) {
     <ul className="entry-bullets">{entry.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul>
     {entry.technologies && <p className="entry-technologies">{entry.technologies}</p>}
   </article>;
+}
+
+function CopyEmail() {
+  const [copied, setCopied] = useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard blocked: the address stays selectable, so it can still be copied by hand.
+    }
+  };
+  return <p className="contact-email">
+    <button type="button" onClick={copy} title="Click to copy" aria-label={`Copy email address ${profile.email}`}>{profile.email}</button>
+    <span className="copy-note" role="status">{copied ? 'Copied' : ''}</span>
+  </p>;
 }
 
 function Index() {
@@ -81,7 +98,11 @@ function Index() {
         <ul className="entry-bullets">{profile.now.map(item => <li key={item}>{item}</li>)}</ul>
       </Section>
       <Section id="contact" title="Contact">
-        <p className="about-copy selectable">The best way to reach me is email: <a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+        <CopyEmail />
+        <div className="link-row">
+          {profile.linkedin && <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>}
+          {profile.github && <a href={profile.github} target="_blank" rel="noopener noreferrer">GitHub</a>}
+        </div>
       </Section>
     </main>
   </>;

@@ -29,7 +29,7 @@ export const profile: Profile = {
   location: 'West Lafayette, IN',
   email: 'zchoudha@purdue.edu',
   linkedin: 'https://www.linkedin.com/in/zayd-choudhary/',
-  github: '',
+  github: 'https://github.com/zaydchoudhary',
   about: [
     "I'm a junior at Purdue studying cybersecurity with a minor in Management, graduating in December 2027.",
     "I got into IT through a school district internship back home in Illinois, where I imaged and repaired hundreds of student devices and earned the Acer Repair Certification. Since then I've taught networking labs at Purdue, done market research for a manufacturer, trained AI models, and run recruitment for a 150+ member business fraternity.",
