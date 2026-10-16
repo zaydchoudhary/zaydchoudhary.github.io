@@ -32,7 +32,7 @@ export const profile: Profile = {
   github: '',
   about: [
     "I'm a junior at Purdue studying cybersecurity with a minor in Management, graduating in December 2027.",
-    "I got into IT through a school district internship back home in Illinois, where I imaged and repaired hundreds of student devices and earned an Acer device repair certification. Since then I've taught networking labs at Purdue, done market research for a manufacturer, trained AI models, and run recruitment for a 150+ member business fraternity.",
+    "I got into IT through a school district internship back home in Illinois, where I imaged and repaired hundreds of student devices and earned the Acer Repair Certification. Since then I've taught networking labs at Purdue, done market research for a manufacturer, trained AI models, and run recruitment for a 150+ member business fraternity.",
     "Outside class I build small tools I actually use, mostly with Claude, and help run a Linux media server. When I'm away from a keyboard I'm usually rock climbing, out on a trail, or playing video games.",
   ],
   directions: "I'm aiming for security and IT engineering, and I'm most interested in where that work meets AI: securing the systems companies are building on AI, and using AI to make IT and security teams faster. Training models and building my own tools with Claude have shown me both sides of that. The other field I'd consider is logistics, where my analyst work at Cadco showed me how much of the supply chain depends on reliable systems and clean data.",
@@ -47,7 +47,7 @@ export const entries: Entry[] = [
   },
   {
     id: 'cusd', role: 'IT Intern', org: 'CUSD 308, Oswego, IL', dates: 'Aug 2023 - May 2024', group: 'it',
-    bullets: ["Tier 1 support across the district's Windows and Chromebook fleets, fixing hardware and OS faults.", 'Imaged, configured and deployed 500+ student and faculty devices back into service.', 'Earned an Acer device repair certification through the role.', 'Restored account and permission access, troubleshot LAN, Wi-Fi and printers across buildings, and checked lab machines against security baselines.'],
+    bullets: ["Tier 1 support across the district's Windows and Chromebook fleets, fixing hardware and OS faults.", 'Imaged, configured and deployed 500+ student and faculty devices back into service.', 'Earned the Acer Repair Certification through the role.', 'Restored account and permission access, troubleshot LAN, Wi-Fi and printers across buildings, and checked lab machines against security baselines.'],
   },
   {
     id: 'cadco', role: 'Research Analyst Intern', org: 'Cadco Ltd., Winsted, CT', dates: 'Jun - Sep 2026', group: 'analysis',
