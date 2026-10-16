@@ -61,7 +61,6 @@ function Index() {
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href={resumeUrl} target="_blank" rel="noopener noreferrer">Resume</a>
       </nav>
     </header>
     <main id="top" className="portfolio-wrap">
