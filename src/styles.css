@@ -112,6 +112,7 @@
 .site-header { padding-block: 32px; }
 .nav-list { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: var(--text-body); }
 .nav-list a, .link-row a { color: var(--muted-foreground); }
+.nav-list a { text-decoration: none; }
 .hero { padding-block: 48px 64px; }
 .hero h1 { font-size: var(--text-title); font-weight: 500; line-height: 1.1; margin: 0 0 24px; }
 .hero-intro { font-size: var(--text-lead); line-height: 1.6; margin: 0; }
