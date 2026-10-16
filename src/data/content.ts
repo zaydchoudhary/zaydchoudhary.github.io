@@ -36,7 +36,7 @@ export const profile: Profile = {
     "Outside class I build small tools I actually use, mostly with Claude, and help run a Linux media server. When I'm away from a keyboard I'm usually rock climbing, out on a trail, or playing video games.",
   ],
   directions: "I'm aiming for security and IT engineering, and I'm most interested in where that work meets AI: securing the systems companies are building on AI, and using AI to make IT and security teams faster. Training models and building my own tools with Claude have shown me both sides of that. The other field I'd consider is logistics, where my analyst work at Cadco showed me how much of the supply chain depends on reliable systems and clean data.",
-  now: ['Working as an AI trainer for multiple companies', 'Running recruitment for Alpha Kappa Psi', 'Building the Study Spots iOS app', 'Studying for ISC2 CC'],
+  now: ['Working as an AI trainer for multiple companies', 'Running recruitment for Alpha Kappa Psi', 'Maintaining our home cloud media server and upgrading its software stack', 'Building the Study Spots iOS app', 'Studying for ISC2 CC'],
   nowUpdated: 'October 2026',
 };
 
