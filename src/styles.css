@@ -115,10 +115,6 @@
 .nav-list a, .link-row a { color: var(--muted-foreground); }
 .nav-list a { text-decoration: none; }
 .hero { padding-block: 24px 72px; }
-/* Faint dot grid behind the top of the page, like a desktop the terminal window sits on. */
-.hero-backdrop { position: absolute; inset: 0 0 auto; height: 760px; z-index: -1; pointer-events: none;
-  background-image: radial-gradient(color-mix(in oklch, var(--foreground) 10%, transparent) 1px, transparent 1.5px);
-  background-size: 22px 22px; mask-image: linear-gradient(to bottom, black 35%, transparent); -webkit-mask-image: linear-gradient(to bottom, black 35%, transparent); }
 .terminal { max-width: 880px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
   box-shadow: 0 1px 0 color-mix(in oklch, var(--foreground) 6%, transparent) inset, 0 30px 60px -30px rgb(0 0 0 / 0.7); }
 .term-titlebar { display: flex; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--border);

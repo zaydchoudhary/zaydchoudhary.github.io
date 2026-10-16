@@ -57,7 +57,6 @@ function Index() {
   const leadership = entries.find(entry => entry.id === 'akpsi');
 
   return <>
-    <div className="hero-backdrop" aria-hidden="true" />
     <header className="portfolio-wrap site-header">
       <nav className="nav-list" aria-label="Main navigation">
         <a href="#work">Work</a>
