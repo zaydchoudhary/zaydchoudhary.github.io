@@ -2,7 +2,7 @@ export type Entry = {
   id: string;
   role: string;
   org: string;
-  dates: string;
+  dates?: string;
   group?: string;
   bullets: string[];
   technologies?: string;
@@ -16,7 +16,6 @@ type Profile = {
   email: string;
   about: string[];
   directions: string;
-  now: string[];
   nowUpdated: string;
   linkedin?: string;
   github?: string;
@@ -36,7 +35,6 @@ export const profile: Profile = {
     "Outside class I build small tools I actually use, mostly with Claude, and help run a Linux media server. When I'm away from a keyboard I'm usually rock climbing, out on a trail, or playing video games.",
   ],
   directions: "I'm aiming for security and IT engineering, and I'm most interested in where that work meets AI: securing the systems companies are building on AI, and using AI to make IT and security teams faster. Training models and building my own tools with Claude have shown me both sides of that. The other field I'd consider is logistics, where my analyst work at Cadco showed me how much of the supply chain depends on reliable systems and clean data.",
-  now: ['Working as an AI trainer for multiple companies', 'Running recruitment for Alpha Kappa Psi', 'Maintaining our home cloud media server and upgrading its software stack', 'Building the Study Spots iOS app', 'Studying for ISC2 CC'],
   nowUpdated: 'October 2026',
 };
 
@@ -86,5 +84,29 @@ export const projects: Entry[] = [
     id: 'server', role: 'Home Cloud Media Server', org: 'Personal project', dates: 'Dec 2024 - now',
     bullets: ['Co-host a self-hosted Linux media server running Jellyfin, with secure remote access for our users.', 'Maintain the Discord bots that give users a simple interface to request films, which then download into our shared library.', "RAID, scheduled backups and restore tests, so one dead drive doesn't take the library with it.", 'Watch uptime, storage health and network traffic, and fix permission and connection problems from the logs.'],
     technologies: 'Linux, Jellyfin, Discord bots, RAID, backups and remote access.',
+  },
+];
+
+// What I'm working on right now. Update nowUpdated in profile when this changes.
+export const now: Entry[] = [
+  {
+    id: 'now-ai-training', role: 'AI trainer', org: 'Multiple companies, remote',
+    bullets: ['Rate and rank model responses against detailed rubrics, and write the reasoning behind every rating.', 'Write prompts and test questions designed to find where models fail, then document what went wrong.'],
+  },
+  {
+    id: 'now-recruitment', role: 'Running recruitment', org: 'Alpha Kappa Psi, Purdue',
+    bullets: ['Leading recruitment for a 150+ member chapter with a committee of 5 and 8 events this semester.', 'Running interviews on the standardized rubrics I built, so every applicant is scored the same way.'],
+  },
+  {
+    id: 'now-server', role: 'Maintaining and upgrading the media server', org: 'Home Cloud Media Server',
+    bullets: ['Keeping Jellyfin, the Discord request bots and the rest of the software stack up to date.', 'Checking backups, storage health and logs as part of each upgrade.'],
+  },
+  {
+    id: 'now-study-spots', role: 'Building the Study Spots iOS app', org: 'SwiftUI client for the Study Spots API',
+    bullets: ['Building the native iOS app on the same API as the web version, working from the Figma designs.', 'Covers exploring spots, rating them, reporting how busy they are, and school-email sign-in.'],
+  },
+  {
+    id: 'now-isc2', role: 'Studying for ISC2 CC', org: 'Certified in Cybersecurity',
+    bullets: ["Working through ISC2's five domains: security principles, incident response and continuity, access controls, network security and security operations."],
   },
 ];

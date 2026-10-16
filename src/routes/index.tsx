@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { useState, type ReactNode } from 'react';
 import { skillGroups } from '@/data/skills';
-import { entries, profile, workGroups, projects, type Entry } from '@/data/content';
+import { entries, profile, workGroups, projects, now, type Entry } from '@/data/content';
 
 const resumeUrl = '/resume.pdf';
 
@@ -27,7 +27,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
 
 function ExperienceRow({ entry }: { entry: Entry }) {
   return <article id={entry.id} className="experience-row">
-    <div className="entry-heading"><h3>{entry.role}</h3><span className="entry-dates">{entry.dates}</span></div>
+    <div className="entry-heading"><h3>{entry.role}</h3>{entry.dates && <span className="entry-dates">{entry.dates}</span>}</div>
     <p className="entry-org">{entry.org}</p>
     <ul className="entry-bullets">{entry.bullets.map(bullet => <li key={bullet}>{bullet}</li>)}</ul>
     {entry.technologies && <p className="entry-technologies">{entry.technologies}</p>}
@@ -82,6 +82,10 @@ function Index() {
       <Section id="projects" title="Projects">
         {projects.map(entry => <ExperienceRow key={entry.id} entry={entry} />)}
       </Section>
+      <Section id="now" title="Now">
+        <p className="section-note">What I'm working on as of {profile.nowUpdated}.</p>
+        {now.map(entry => <ExperienceRow key={entry.id} entry={entry} />)}
+      </Section>
       <Section id="skills" title="Skills">
         <dl className="skills-list">{skillGroups.map(group => <div key={group.name}>
           <dt>{group.name}</dt>
@@ -95,8 +99,6 @@ function Index() {
         {profile.about.map(paragraph => <p className="about-copy" key={paragraph}>{paragraph}</p>)}
         <h3>Where I'm headed</h3>
         <p className="about-copy">{profile.directions}</p>
-        <h3>Now ({profile.nowUpdated})</h3>
-        <ul className="entry-bullets">{profile.now.map(item => <li key={item}>{item}</li>)}</ul>
       </Section>
       <Section id="contact" title="Contact">
         <CopyEmail />
