@@ -39,6 +39,7 @@ function CopyEmail() {
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(profile.email);
+      window.getSelection()?.removeAllRanges();
       setCopied(true);
       window.setTimeout(() => setCopied(false), 2000);
     } catch {
