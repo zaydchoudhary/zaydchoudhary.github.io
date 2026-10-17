@@ -79,6 +79,7 @@ export function TerminalHero({ resumeUrl }: { resumeUrl: string }) {
       <form className="term-line" onSubmit={submit}>
         <label className="term-input-line">
           <span className="term-prompt">{PROMPT}</span>
+          <span className="term-cursor" aria-hidden="true" />
           <input ref={input} className="term-input" value={value} onChange={event => setValue(event.target.value)}
             aria-label="Terminal command" placeholder="type help" autoComplete="off" autoCapitalize="off" autoCorrect="off" spellCheck={false} />
         </label>
