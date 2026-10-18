@@ -62,6 +62,7 @@ function Index() {
         <a href="#work">Work</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
     <main id="top" className="portfolio-wrap">
