@@ -75,8 +75,7 @@ function Index() {
       <Section id="projects" title="Projects">
         {projects.map(entry => <ExperienceRow key={entry.id} entry={entry} />)}
       </Section>
-      <Section id="now" title="Now">
-        <p className="section-note">What I'm working on as of {profile.nowUpdated}.</p>
+      <Section id="now" title="Current Focus">
         {now.map(entry => <ExperienceRow key={entry.id} entry={entry} />)}
       </Section>
       <Section id="skills" title="Skills">

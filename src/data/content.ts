@@ -16,7 +16,6 @@ type Profile = {
   email: string;
   about: string[];
   directions: string;
-  nowUpdated: string;
   linkedin?: string;
   github?: string;
 };
@@ -30,34 +29,32 @@ export const profile: Profile = {
   linkedin: 'https://www.linkedin.com/in/zayd-choudhary/',
   github: 'https://github.com/zaydchoudhary',
   about: [
-    "I'm a junior at Purdue studying cybersecurity with a minor in Management, graduating in December 2027.",
-    "I got into IT through a school district internship back home in Illinois, where I imaged and repaired hundreds of student devices and earned the Acer Repair Certification. Since then I've taught networking labs at Purdue, done market research for a manufacturer, trained AI models, and run recruitment for a 150+ member business fraternity.",
-    "Outside class I build small tools I actually use, mostly with Claude, and help run a Linux media server. When I'm away from a keyboard I'm usually rock climbing, out on a trail, or playing video games.",
+    "I'm a junior at Purdue studying cybersecurity with a minor in Management, graduating in December 2027. I got my start in IT through an internship with my home school district in Illinois.",
+    "Outside class I build small tools I actually use, mostly with Claude. Away from the keyboard I'm usually rock climbing, hiking or playing video games.",
   ],
-  directions: "I'm aiming for security and IT engineering, and I'm most interested in where that work meets AI: securing the systems companies are building on AI, and using AI to make IT and security teams faster. Training models and building my own tools with Claude have shown me both sides of that. The other field I'd consider is logistics, where my analyst work at Cadco showed me how much of the supply chain depends on reliable systems and clean data.",
-  nowUpdated: 'October 2026',
+  directions: "I'm working toward security and IT engineering, with a focus on where that work meets AI: securing the AI tools companies now rely on, and using AI to help IT and security teams move faster. I'm also open to IT and systems roles in logistics and supply chain.",
 };
 
 export const entries: Entry[] = [
   {
     id: 'ta', role: 'Lab Instructor (Undergraduate TA)', org: 'Purdue Polytechnic, CNIT 17600', dates: 'Jan - Jun 2026', group: 'it',
-    bullets: ['Led weekly labs for a class of 35 on networking, system hardware and OS fundamentals.', 'Walked students through lab builds and live hardware, OS and network troubleshooting. Lab report scores went up 10% over the semester.', 'Graded hundreds of lab assignments against standardized rubrics and flagged recurring technical errors to faculty.'],
+    bullets: ['Led weekly labs for a class of 35 students on networking, system hardware and OS fundamentals.', 'Guided students through lab builds and live hardware, OS and network troubleshooting, helping raise lab report scores 10%.', 'Graded hundreds of lab assignments against standardized rubrics and reported recurring technical errors to faculty.'],
   },
   {
     id: 'cusd', role: 'IT Intern', org: 'CUSD 308, Oswego, IL', dates: 'Aug 2023 - May 2024', group: 'it',
-    bullets: ["Tier 1 support across the district's Windows and Chromebook fleets, fixing hardware and OS faults.", 'Imaged, configured and deployed 500+ student and faculty devices back into service.', 'Earned the Acer Repair Certification through the role.', 'Restored account and permission access, troubleshot LAN, Wi-Fi and printers across buildings, and checked lab machines against security baselines.'],
+    bullets: ["Delivered Tier 1 support across the district's Windows and Chromebook fleets, resolving hardware and OS faults.", 'Imaged, configured and deployed 500+ student and faculty devices, and earned the Acer Repair Certification.', 'Restored account and permission access and troubleshot LAN, Wi-Fi and printer connectivity across buildings.', 'Maintained IT inventory and verified pilot-course lab devices met required configurations and security baselines.'],
   },
   {
     id: 'cadco', role: 'Research Analyst Intern', org: 'Cadco Ltd., Winsted, CT', dates: 'Jun - Sep 2026', group: 'analysis',
-    bullets: ['Built two competitive intelligence databases covering 125+ products from 15 manufacturers, and fixed 15+ spec errors.', 'Checked pricing on 100+ models across 25+ distributors and found price gaps of up to 59%.', 'Designed a weighted scoring model in Excel that ranks 1,000+ product comparisons. Staff refresh it every month.'],
+    bullets: ['Built two competitive intelligence databases covering 125+ products from 15 manufacturers, correcting 15+ spec errors.', 'Verified pricing on 100+ models across 25+ distributors and found price gaps of up to 59% between dealers.', 'Designed a weighted scoring model in Excel that ranks 1,000+ product comparisons; staff refresh it monthly.'],
   },
   {
     id: 'handshake', role: 'AI Trainer', org: 'Handshake, remote', dates: 'Nov 2025 - Jan 2026', group: 'analysis',
-    bullets: ['Rated and ranked 100+ model responses on accuracy, relevance and instruction-following against set rubrics.', 'Wrote a rationale for every rating, documenting errors and explaining why one response beat another.', 'Wrote prompts and test questions designed to surface where models fail.'],
+    bullets: ['Rated and ranked 100+ AI model responses on accuracy, relevance and instruction-following against set rubrics.', 'Wrote a rationale for each rating, documenting errors and explaining why one response outranked another.', 'Wrote prompts and test questions used to evaluate model responses and find failure cases.'],
   },
   {
     id: 'akpsi', role: 'Head of Recruitment', org: 'Alpha Kappa Psi, Purdue', dates: 'Aug 2026 - now',
-    bullets: ['Run recruitment for a 150+ member chapter with a committee of 5 and 8 events a semester.', 'Rebuilt interviews around standardized rubrics and picked 30 new members from 300+ applicants.', 'Pledge Trainer before that (Jan - Jun 2026), class of 35.'],
+    bullets: ['Led recruitment for a 150+ member chapter, running a committee of 5 across 8 recruitment events.', 'Rebuilt the interview process around standardized rubrics and selected 30 new members from 300+ applicants.', 'Served as Pledge Trainer before this role (Jan - Jun 2026), coaching a pledge class of 35.'],
   },
 ];
 
@@ -67,46 +64,37 @@ export const workGroups = ['it', 'analysis'];
 export const projects: Entry[] = [
   {
     id: 'study-spots', role: 'Study Spots', org: 'Web and iOS app for Big Ten students', dates: 'In progress',
-    bullets: ['Students post specific study spots (a desk, a floor, a café table), rate them on ten categories and report how busy they are. Reports roll up into hourly busyness charts, weekdays vs weekends.', 'Passwordless sign-in with school email codes (rate-limited, with expiring sessions). Campus data covers 18 Big Ten schools.', 'Designed in Figma first, then built a web client and a native SwiftUI iOS client on the same API.'],
+    bullets: ['Lets students post specific study spots, like a library desk or a café table, rate them in ten categories and report how busy they are.', 'Turns busyness reports into hourly charts, split by weekdays and weekends, across 18 Big Ten campuses.', 'Designed in Figma, then built as a web app and a native SwiftUI iOS app sharing one API, with passwordless sign-in through school email codes.'],
     technologies: 'Node.js, SQLite, vanilla JS, SwiftUI, Figma and Docker. Built with Claude Code.',
   },
   {
     id: 'spotify-lyrics', role: 'Spotify Lyrics', org: 'macOS menu bar app', dates: '2026',
-    bullets: ["An always-on-top bar that shows synced lyrics for whatever's playing in Spotify, with the next line in grey. Click to swap to album art.", 'Reads the track and playback position from Spotify over AppleScript and pulls timed lyrics from lrclib.net. One Swift file, no dependencies.'],
+    bullets: ['Shows synced lyrics for the current Spotify song in a small always-on-top bar, with the next line in gray and a click to switch to album art.', 'Reads playback position from Spotify through AppleScript and pulls timed lyrics from lrclib.net, in a single Swift file with no dependencies.'],
     technologies: 'Swift, AppKit and AppleScript. Built with Claude Code.',
   },
   {
     id: 'internship-tracker', role: 'Internship tracker', org: 'Google Sheets add-on', dates: '2026',
-    bullets: ["Paste a job link and it fills a row in my application tracker. It reads the posting's own data on Greenhouse, Lever, Ashby and Workday pages, with an optional Claude fallback for messy pages."],
+    bullets: ["Turns a pasted job link into a row in my application tracker by reading the posting's data from Greenhouse, Lever, Ashby and Workday pages, with an optional Claude fallback for pages that don't parse cleanly."],
     technologies: 'Google Apps Script and the Claude API.',
   },
   {
     id: 'server', role: 'Home Cloud Media Server', org: 'Personal project', dates: 'Dec 2024 - now',
-    bullets: ['Co-host a self-hosted Linux media server running Jellyfin, with secure remote access for our users.', 'Maintain the Discord bots that give users a simple interface to request films, which then download into our shared library.', "RAID, scheduled backups and restore tests, so one dead drive doesn't take the library with it.", 'Watch uptime, storage health and network traffic, and fix permission and connection problems from the logs.'],
-    technologies: 'Linux, Jellyfin, Discord bots, RAID, backups and remote access.',
+    bullets: ['Co-host a self-hosted Linux media server running Jellyfin with secure remote access for users.', 'Maintain and upgrade the server software, including the Discord bots that let users request films and download them to our shared library.', 'Configured RAID arrays, scheduled backups and restore testing to protect against drive and configuration failures.', 'Monitor uptime, storage health and network traffic, and resolve permission and connectivity issues through system logs.'],
   },
 ];
 
-// What I'm working on right now. Update nowUpdated in profile when this changes.
+// Current focus section. Keep it short; anything covered above doesn't need repeating here.
 export const now: Entry[] = [
   {
-    id: 'now-ai-training', role: 'AI trainer', org: 'Multiple companies, remote',
-    bullets: ['Rate and rank model responses against detailed rubrics, and write the reasoning behind every rating.', 'Write prompts and test questions designed to find where models fail, then document what went wrong.'],
+    id: 'now-recruitment', role: 'Recruitment process improvement', org: 'Alpha Kappa Psi, Purdue',
+    bullets: ["Recruitment season is over, so I'm running a continuous improvement project to standardize our recruiting process and make the handoff to the next leaders smooth."],
   },
   {
-    id: 'now-recruitment', role: 'Running recruitment', org: 'Alpha Kappa Psi, Purdue',
-    bullets: ['Leading recruitment for a 150+ member chapter with a committee of 5 and 8 events this semester.', 'Running interviews on the standardized rubrics I built, so every applicant is scored the same way.'],
+    id: 'now-ai-training', role: 'AI Trainer', org: 'Multiple companies, remote',
+    bullets: ['Evaluating model responses and writing test prompts for several AI companies.'],
   },
   {
-    id: 'now-server', role: 'Maintaining and upgrading the media server', org: 'Home Cloud Media Server',
-    bullets: ['Keeping Jellyfin, the Discord request bots and the rest of the software stack up to date.', 'Checking backups, storage health and logs as part of each upgrade.'],
-  },
-  {
-    id: 'now-study-spots', role: 'Building the Study Spots iOS app', org: 'SwiftUI client for the Study Spots API',
-    bullets: ['Building the native iOS app on the same API as the web version, working from the Figma designs.', 'Covers exploring spots, rating them, reporting how busy they are, and school-email sign-in.'],
-  },
-  {
-    id: 'now-isc2', role: 'Studying for ISC2 CC', org: 'Certified in Cybersecurity',
-    bullets: ["Working through ISC2's five domains: security principles, incident response and continuity, access controls, network security and security operations."],
+    id: 'now-isc2', role: 'ISC2 Certified in Cybersecurity', org: 'Exam prep',
+    bullets: ['Studying security principles, incident response, access controls, network security and security operations.'],
   },
 ];

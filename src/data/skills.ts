@@ -1,7 +1,8 @@
+// Mirrors the Technical Skills section of the resume.
 export const skillGroups = [
-  { name: 'Systems and networking', skills: ['Networking', 'Hardware and OS troubleshooting', 'Linux', 'Windows and Windows Server', 'System imaging', 'RAID', 'Remote access', 'VMware', 'Google Cloud'] },
-  { name: 'Languages', skills: ['Python', 'Bash', 'PowerShell', 'SQL', 'Java', 'Swift / SwiftUI'] },
-  { name: 'Security', skills: ['Access and permissions', 'Security baselines', 'Backup and recovery', 'Log analysis', 'Cryptography'] },
-  { name: 'Data and analysis', skills: ['Excel', 'Scoring models', 'Pricing and market research', 'MySQL', 'Microsoft Access'] },
-  { name: 'How I work', skills: ['Rubric-based evaluation', 'Catching errors', 'Teaching and coaching', 'Technical writing'] },
+  { name: 'Languages and scripting', skills: ['Python', 'Bash', 'PowerShell', 'SQL', 'Java'] },
+  { name: 'Systems and networking', skills: ['Linux', 'UNIX', 'Windows Server', 'Raspberry Pi', 'System imaging', 'RAID', 'LAN and Wi-Fi troubleshooting'] },
+  { name: 'Cloud and virtualization', skills: ['Google Cloud', 'VMware', 'Nutanix', 'Remote Desktop'] },
+  { name: 'Data and tools', skills: ['MySQL', 'Microsoft Access', 'Excel', 'Microsoft 365'] },
+  { name: 'Security', skills: ['Cryptography', 'Access and permission management', 'Security baseline verification', 'Backup and recovery', 'Log analysis'] },
 ];

@@ -146,7 +146,6 @@
 .content-section h2 { display: flex; align-items: center; gap: 12px; font-size: var(--text-heading); font-weight: 500; margin: 0 0 24px; }
 .content-section h2::before { content: ''; width: 14px; height: 2px; background: var(--primary); }
 .content-section h3 { font-size: var(--text-sub); font-weight: 500; margin: 32px 0 12px; }
-.section-note { font-size: var(--text-body); color: var(--muted-foreground); margin: -12px 0 8px; }
 .experience-row { position: relative; padding-block: 20px; }
 .experience-row + .experience-row { border-top: 1px solid var(--border); }
 .entry-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 24px; }
@@ -173,7 +172,6 @@
   .content-section h2 { margin: 0; line-height: 1.3; align-self: start; }
   .section-body > .experience-row:first-child { padding-top: 0; }
   .section-body > :first-child { margin-top: 0; }
-  .section-note { margin: 0 0 8px; }
 }
 /* Desktop hover: title turns gold and a thin gold line marks the row in the gutter. */
 @media(hover: hover) and (min-width: 960px) {
