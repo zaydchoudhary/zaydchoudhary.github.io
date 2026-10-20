@@ -73,6 +73,19 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
+const CSP = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self'",
+  "img-src 'self' data:",
+  "font-src 'self' data:", // small font subsets are inlined into the CSS as data: URLs at build time
+  "connect-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "upgrade-insecure-requests",
+].join('; ');
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -84,6 +97,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Zayd Choudhary" },
       { property: "og:description", content: "Zayd Choudhary, cybersecurity student at Purdue University." },
       { property: "og:type", content: "website" },
+      { name: "referrer", content: "strict-origin-when-cross-origin" },
+      // GitHub Pages can't send security headers, so the policy ships as a meta tag (production only; Vite's dev server needs more).
+      // ponytail: script-src allows inline because the router's hydration scripts change every build; switch to per-build hashes if the site ever takes user input.
+      ...(import.meta.env.PROD ? [{ httpEquiv: "Content-Security-Policy", content: CSP }] : []),
     ],
     links: [
       {
@@ -91,9 +108,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" },
     ],
   }),
   shellComponent: RootShell,
